@@ -15,6 +15,7 @@ let spotify = new Spotify(keys.spotify);
 
 let command = process.argv[2];
 let nodeInput = process.argv[3];
+console.log(command  + '\n' + nodeInput);
 
 // OBJECT[command][input]();
 
@@ -31,16 +32,16 @@ switch (command) {
                   );
       break;
   case "concert-this":
-      liriBot.concert(nodeInput);
+      concert(nodeInput);
       break;
   case "spotify-this-song":
-      liriBot.spotify(nodeInput);
+      music(nodeInput);
       break;
   case "movie-this":
-      liriBot.movies(nodeInput);
+      movies(nodeInput);
       break;
   case "do-what-it-says":
-      liriBot.doWhatItSays();
+      doWhatItSays();
       break;
   //if anything else written
   default:
@@ -48,28 +49,33 @@ switch (command) {
 };
 
 
-let liriBot = {
+function concert(nodeInput) {
+  console.log('concert');
+  console.log(nodeInput);
 
-  concert = function() {
-
-  },
-  spotify = function() {
-
-
-    spotify.search({ type: 'track', query: input }, function(err, data) {
-      if (err) {
-        return console.log('Error occurred: ' + err);
-      };
-    console.log(data); 
-    });
-    
-
-  },
-  movies = function() {
-
-  },
-  doWhatItSays = function() {
-
-  },
 };
- 
+
+function music(nodeInput) {
+
+  spotify.search({ type: 'track', query: nodeInput }, function(err, data) {
+    if (err) {
+      return console.log('Error occurred: ' + err);
+    };
+  });
+
+  console.log(data); 
+  console.log(nodeInput);
+
+};
+
+function movies(nodeInput) {
+  console.log('movies');
+  console.log(nodeInput);
+
+};
+
+function doWhatItSays(nodeInput) {
+  console.log('doWhatItSays');
+  console.log(nodeInput);
+
+};
