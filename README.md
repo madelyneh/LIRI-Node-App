@@ -1,4 +1,4 @@
-# LIRI-Bot
+# LIRI-Node-App
 ----------
 
 ## Table of Contents 
