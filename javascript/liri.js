@@ -1,14 +1,18 @@
 require("dotenv").config();
 
-
+//Require data from moment npm package
+let moment = require('moment');
+//Require data from File System npm package
+let fs = require('fs');
+//Require data from Axios npm package
+let axios = require('axios');
+//Grab data key from keys.js file
+let keys = require('./keys');
+//Grad user input
 let command = process.argv[2];
 let input = process.argv[3];
 
 OBJECT[command][input]();
-
-let axios = require('axios');
-
-axios.get()
 
 
 
