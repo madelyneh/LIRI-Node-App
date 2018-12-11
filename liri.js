@@ -11,14 +11,12 @@ let keys = require('./keys');
 //Grabs data from Spotify
 let Spotify = require('node-spotify-api');
 let spotify = new Spotify(keys.spotify);
-//Grad user input
+let omdbKey = keys.omdbKey;
 
+//Grad user input
 let command = process.argv[2];
 let nodeInput = process.argv[3];
-console.log(command  + '\n' + nodeInput);
-
-// OBJECT[command][input]();
-
+// console.log(command  + '\n' + nodeInput);
 
 //Program conditions 
 switch (command) {
@@ -51,47 +49,64 @@ switch (command) {
 
 function concert(nodeInput) {
   console.log('concert');
-  console.log(nodeInput);
-
 };
 
 function music(nodeInput) {
 
-  spotify
-  .search({ type: 'track', query: nodeInput })
-  .then(function(response) {
-    console.log(response);
-  })
-  .catch(function(err) {
-    console.log(err);
+  if (!nodeInput){
+
+    nodeInput = 'The Sign';
+  };
+
+  spotify.search({ type: 'track', query: nodeInput, limit: 4 }, function(err, data) {
+    if (err) {
+      return console.log('Error occurred: ' + err);
+    };
+
+    let songInfo = data.tracks.items;
+  
+    console.log("-------------------SongInfo-------------------");
+    console.log("Artist(s): " + songInfo[0].artists[0].name);
+    console.log("Song Name: " + songInfo[0].name);
+    console.log("Preview Link: " + songInfo[0].preview_url);
+    console.log("Album: " + songInfo[0].album.name);
+    console.log("-----------------------------------------------");
   });
-  let songInfo = data.tracks.items;
-  console.log(songInfo);
-
-  // spotify.search({ type: 'track', query: nodeInput }, function(err, data) {
-  //   if (err) {
-  //     return console.log('Error occurred: ' + err);
-  //   };
-
-  //   console.log("Artist(s): " + songData[0].artists[0].name);
-  //   console.log("Song Name: " + songData[0].name);
-  //   console.log("Preview Link: " + songData[0].preview_url);
-  //   console.log("Album: " + songData[0].album.name);
-  // });
-
-  console.log(data); 
-  console.log(nodeInput);
-
 };
 
 function movies(nodeInput) {
-  console.log('movies');
-  console.log(nodeInput);
 
+  axios({
+    method:'get',
+    url:"http://www.omdbapi.com/?t=" + nodeInput + "&y=&plot=short&apikey=" + omdbKey,
+  })
+    .then(function(response) {
+    let newMovie = response.data;
+    // let jsonData = JSON.parse();
+    console.log(newMovie);
+
+      console.log("------------------MovieInfo--------------------");
+      console.log("Movie Title: " + newMovie.Title);
+      console.log("Release: " + newMovie.Released);
+      console.log("IMDB Rating: " + newMovie.imdbRating);
+      let ratings = Object.entries(newMovie.Ratings);
+
+      for (i = 0; i < ratings.length; i ++) {
+        let rating = ratings[i];
+        let source = rating[1].Source;
+        if (source === 'Rotten Tomatoes') {
+          console.log("Rotten Tomatoes Rating: " + rating[1].Value);
+        };
+      }; 
+      console.log("Country Producted In: " + newMovie.Country);
+      console.log("Language: " + newMovie.Language);
+      console.log("Actors: " + newMovie.Actors);
+      console.log("Plot: " + newMovie.Plot);
+      console.log("-----------------------------------------------");
+  });
 };
 
 function doWhatItSays(nodeInput) {
   console.log('doWhatItSays');
-  console.log(nodeInput);
 
 };
