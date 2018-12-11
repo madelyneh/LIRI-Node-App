@@ -49,12 +49,26 @@ switch (command) {
 
 function concert(nodeInput) {
   console.log('concert');
+
+
+  "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=" + bandKey
+
+  if (!nodeInput){
+    nodeInput = 'The Sign';
+  };
+
+
+
+
+  // * Name of the venue
+  // * Venue location
+  // * Date of the Event (use moment to format this as "MM/DD/YYYY")
+
 };
 
 function music(nodeInput) {
 
   if (!nodeInput){
-
     nodeInput = 'The Sign';
   };
 
