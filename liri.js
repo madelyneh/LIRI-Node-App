@@ -9,7 +9,7 @@ let axios = require('axios');
 //Grab data key from keys.js file
 let keys = require('./keys');
 //Grabs data from Spotify
-let Spotify = require('node_modules/node-spotify-api');
+let Spotify = require('node-spotify-api');
 let spotify = new Spotify(keys.spotify);
 //Grad user input
 
@@ -57,11 +57,27 @@ function concert(nodeInput) {
 
 function music(nodeInput) {
 
-  spotify.search({ type: 'track', query: nodeInput }, function(err, data) {
-    if (err) {
-      return console.log('Error occurred: ' + err);
-    };
+  spotify
+  .search({ type: 'track', query: nodeInput })
+  .then(function(response) {
+    console.log(response);
+  })
+  .catch(function(err) {
+    console.log(err);
   });
+  let songInfo = data.tracks.items;
+  console.log(songInfo);
+
+  // spotify.search({ type: 'track', query: nodeInput }, function(err, data) {
+  //   if (err) {
+  //     return console.log('Error occurred: ' + err);
+  //   };
+
+  //   console.log("Artist(s): " + songData[0].artists[0].name);
+  //   console.log("Song Name: " + songData[0].name);
+  //   console.log("Preview Link: " + songData[0].preview_url);
+  //   console.log("Album: " + songData[0].album.name);
+  // });
 
   console.log(data); 
   console.log(nodeInput);
