@@ -9,7 +9,7 @@ let axios = require('axios');
 //Grab data key from keys.js file
 let keys = require('./keys');
 //Grabs data from Spotify
-let Spotify = require('node-spotify-api');
+let Spotify = require('node_modules/node-spotify-api');
 let spotify = new Spotify(keys.spotify);
 //Grad user input
 
