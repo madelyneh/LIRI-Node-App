@@ -49,33 +49,29 @@ switch (command) {
 
 
 function concert(nodeInput) {
-  console.log('concert');
 
   axios({
     method:'get',
     url:"https://rest.bandsintown.com/artists/" + nodeInput + "/events?app_id=" + bandKey,
   })
     .then(function(response) {
-      console.log("-----------------------------------------------");
-      console.log(response);
-      console.log("-----------------------------------------------");
+
+      let event = Object.entries(response.data[0]);
+      let venue = Object.entries(event[1])[1];
+      let venueInfo = venue[1];
+      let dateArray = event[2];
+      let date = dateArray[1];
+      let correctDate = date.substring(5,9) + "-" + date.substring(0,4);
+      let artist = nodeInput.charAt(0).toUpperCase() + nodeInput.substring(1);
+      
+      console.log("------------ " + artist + " Concert------------");
+      console.log("Venue Name: " + venueInfo.name);
+      console.log("Location: " + venueInfo.city +", " + venueInfo.country);
+      console.log("Date: " + correctDate);
+      console.log("-------------------------------------");
 
     });
   };
-
-  
-
-  // if (!nodeInput){
-  //   nodeInput = 'The Sign';
-  // };
-
-
-
-
-  // * Name of the venue
-  // * Venue location
-  // * Date of the Event (use moment to format this as "MM/DD/YYYY")
-
 
 function music(nodeInput) {
 
