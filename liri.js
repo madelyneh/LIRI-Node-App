@@ -12,6 +12,7 @@ let keys = require('./keys');
 let Spotify = require('node-spotify-api');
 let spotify = new Spotify(keys.spotify);
 let omdbKey = keys.omdbKey;
+let bandKey = keys.bandKey;
 
 //Grad user input
 let command = process.argv[2];
@@ -50,12 +51,23 @@ switch (command) {
 function concert(nodeInput) {
   console.log('concert');
 
+  axios({
+    method:'get',
+    url:"https://rest.bandsintown.com/artists/" + nodeInput + "/events?app_id=" + bandKey,
+  })
+    .then(function(response) {
+      console.log("-----------------------------------------------");
+      console.log(response);
+      console.log("-----------------------------------------------");
 
-  "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=" + bandKey
-
-  if (!nodeInput){
-    nodeInput = 'The Sign';
+    });
   };
+
+  
+
+  // if (!nodeInput){
+  //   nodeInput = 'The Sign';
+  // };
 
 
 
@@ -64,7 +76,6 @@ function concert(nodeInput) {
   // * Venue location
   // * Date of the Event (use moment to format this as "MM/DD/YYYY")
 
-};
 
 function music(nodeInput) {
 

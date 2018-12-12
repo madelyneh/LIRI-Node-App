@@ -20,9 +20,8 @@
 <a name="technologies"></a>
 ## Technologies
 
- - Ajax
- - JavaScript
- - Node.js 
+ - Axios
+ - JavaScript w/ Node.js 
 
 
 

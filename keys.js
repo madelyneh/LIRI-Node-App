@@ -6,3 +6,6 @@ exports.spotify = {
 };
 
 exports.omdbKey = process.env.OMDB_API;
+
+
+exports.bandKey = process.env.BANDS_IN_TOWN;
