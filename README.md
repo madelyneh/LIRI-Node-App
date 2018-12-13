@@ -12,10 +12,6 @@
 ## What does Liri-Bot do?
 * 
 
-<a name="problems"></a>
-## Problems Addressed
-* 
-
 ### concert-this 
 ![ConcertDisplay](assets/images/Liri-Concert.png)
 
@@ -25,6 +21,20 @@
 ### movie-this 
 ![MovieDisplay](assets/images/Liri-Movie.png)
 
+
+<a name="problems"></a>
+## Problems Addressed
+* 
+
+
+### Liri-Help 
+![ConcertDisplay](assets/images/Liri-Help.png)
+
+### spotify-this-song error
+![SpotifyDisplay](assets/images/Liri-Spotify-er.png)
+
+### movie-this error
+![MovieDisplay](assets/images/Liri-Movie-er.png)
 
 
 <a name="technologies"></a>
