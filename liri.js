@@ -17,7 +17,8 @@ let bandKey = keys.bandKey;
 //Grad user input
 let command = process.argv[2];
 let nodeInput = process.argv[3];
-// console.log(command  + '\n' + nodeInput);
+let userInput = nodeInput.charAt(0).toUpperCase() + nodeInput.substring(1);
+
 
 //Program conditions 
 switch (command) {
@@ -56,19 +57,19 @@ function concert(nodeInput) {
   })
     .then(function(response) {
 
-      let event = Object.entries(response.data[0]);
-      let venue = Object.entries(event[1])[1];
-      let venueInfo = venue[1];
-      let dateArray = event[2];
-      let date = dateArray[1];
-      let correctDate = date.substring(5,9) + "-" + date.substring(0,4);
-      let artist = nodeInput.charAt(0).toUpperCase() + nodeInput.substring(1);
-      
-      console.log("------------ " + artist + " Concert------------");
-      console.log("Venue Name: " + venueInfo.name);
-      console.log("Location: " + venueInfo.city +", " + venueInfo.country);
-      console.log("Date: " + correctDate);
-      console.log("-------------------------------------");
+        let event = Object.entries(response.data[0]);
+        let venue = Object.entries(event[1])[1];
+        let venueInfo = venue[1];
+        let dateArray = event[2];
+        let date = dateArray[1];
+        let correctDate = date.substring(5,9) + "-" + date.substring(0,4);
+        
+        console.log("-----ConcertInfo-----");
+        console.log("Artist: " + userInput);
+        console.log("Venue Name: " + venueInfo.name);
+        console.log("Location: " + venueInfo.city +", " + venueInfo.country);
+        console.log("Date: " + correctDate);
+        console.log("----------------------");
 
     });
   };
@@ -85,13 +86,14 @@ function music(nodeInput) {
     };
 
     let songInfo = data.tracks.items;
-  
-    console.log("-------------------SongInfo-------------------");
+
+    console.log("-----SongInfo-----");
+    console.log("Title: " + userInput);
     console.log("Artist(s): " + songInfo[0].artists[0].name);
     console.log("Song Name: " + songInfo[0].name);
     console.log("Preview Link: " + songInfo[0].preview_url);
     console.log("Album: " + songInfo[0].album.name);
-    console.log("-----------------------------------------------");
+    console.log("---------------------");
   });
 };
 
@@ -103,10 +105,8 @@ function movies(nodeInput) {
   })
     .then(function(response) {
     let newMovie = response.data;
-    // let jsonData = JSON.parse();
-    console.log(newMovie);
 
-      console.log("------------------MovieInfo--------------------");
+      console.log("------------MovieInfo------------");
       console.log("Movie Title: " + newMovie.Title);
       console.log("Release: " + newMovie.Released);
       console.log("IMDB Rating: " + newMovie.imdbRating);
@@ -119,11 +119,11 @@ function movies(nodeInput) {
           console.log("Rotten Tomatoes Rating: " + rating[1].Value);
         };
       }; 
-      console.log("Country Producted In: " + newMovie.Country);
+      console.log("Country Produced In: " + newMovie.Country);
       console.log("Language: " + newMovie.Language);
       console.log("Actors: " + newMovie.Actors);
       console.log("Plot: " + newMovie.Plot);
-      console.log("-----------------------------------------------");
+      console.log("-------------------------------------");
   });
 };
 

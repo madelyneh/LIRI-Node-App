@@ -7,7 +7,7 @@
 3. [Technologies](#technologies)
 
 
-![MainDisplay](assets/liriBot.png)
+![MainDisplay](assets/images/liriBot.png)
 <a name="target"></a>
 ## Target Audience
 * 
