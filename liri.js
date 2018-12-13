@@ -17,7 +17,6 @@ let bandKey = keys.bandKey;
 //Grad user input
 let command = process.argv[2];
 let nodeInput = process.argv[3];
-let userInput = nodeInput.charAt(0).toUpperCase() + nodeInput.substring(1);
 
 
 //Program conditions 
@@ -63,6 +62,7 @@ function concert(nodeInput) {
         let dateArray = event[2];
         let date = dateArray[1];
         let correctDate = date.substring(5,9) + "-" + date.substring(0,4);
+        let userInput = nodeInput.charAt(0).toUpperCase() + nodeInput.substring(1);
         
         console.log("-----ConcertInfo-----");
         console.log("Artist: " + userInput);
@@ -86,6 +86,7 @@ function music(nodeInput) {
     };
 
     let songInfo = data.tracks.items;
+    let userInput = nodeInput.charAt(0).toUpperCase() + nodeInput.substring(1);
 
     console.log("-----SongInfo-----");
     console.log("Title: " + userInput);
@@ -98,6 +99,10 @@ function music(nodeInput) {
 };
 
 function movies(nodeInput) {
+
+  if (!nodeInput){
+    nodeInput = 'Mr. Nobody';
+  };
 
   axios({
     method:'get',
