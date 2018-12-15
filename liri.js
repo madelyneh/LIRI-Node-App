@@ -141,17 +141,18 @@ function doWhatItSays() {
 
   fs.readFile('assets/random.txt', "utf8", function(error, data){
 
-    console.log("--------Data--------");
-    console.log(data);
-    
+    // console.log("--------Data--------");
+    // console.log(data);
+
     commandData = data.split(" ");
     let command = commandData[1]; 
+    let action = command.substring(0, command.length - 1)
+    console.log("--------Action--------");
+    console.log(action);
     let input = data.substr(command.length + 3);
 
+    // if ()
     music(input);
-
-    console.log("--------Input--------");
-    console.log(input);
   });
 
   fs.writeFile('assets/random.txt', "* movie-this, 'I Want it That Way'", function(err) {
