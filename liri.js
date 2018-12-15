@@ -17,6 +17,12 @@ let bandKey = keys.bandKey;
 //Grad user input
 let command = process.argv[2];
 let nodeInput = process.argv[3];
+// let fullNode = process.argv;
+let args = process.argv.slice(3).toString("");
+console.log("-------ARGS------")
+console.log(args);
+console.log("-------------")
+
 
 
 //Program conditions 
@@ -132,7 +138,31 @@ function movies(nodeInput) {
   });
 };
 
-function doWhatItSays(nodeInput) {
-  console.log('doWhatItSays');
+function doWhatItSays() {
+
+  fs.readFile('assets/random.txt', "utf8", function(error, data){
+
+    console.log("--------Data--------");
+    console.log(data);
+    
+    commandData = data.split(" ");
+    let command = commandData[1]; 
+    let input = data.substr(command.length + 3);
+
+    music(input);
+
+    console.log("--------Input--------");
+    console.log(input);
+  });
+
+  fs.appendFile('assets/random.txt', "\n* movie-this, 'I Want it That Way'", function(err) {
+    if (err) throw err;
+    console.log("Error: " + err);
+  });
+
+  fs.appendFile('assets/random.txt', "\n* concert-this, 'I Want it That Way'", function(err) {
+    if (err) throw err;
+    console.log("Error: " + err);
+  });
 
 };
