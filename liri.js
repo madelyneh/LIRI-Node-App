@@ -16,14 +16,7 @@ let bandKey = keys.bandKey;
 
 //Grad user input
 let command = process.argv[2];
-let nodeInput = process.argv[3];
-// let fullNode = process.argv;
-let args = process.argv.slice(3).toString("");
-console.log("-------ARGS------")
-console.log(args);
-console.log("-------------")
-
-
+let nodeInput = process.argv.slice(3).toString(" ").replace(",", " ");
 
 //Program conditions 
 switch (command) {
@@ -53,14 +46,20 @@ switch (command) {
       console.log("LIRI doesn't understand that - Please type 'node liri.js help' for more information");
 };
 
-
 function concert(nodeInput) {
+
+  let apiURL = "https://rest.bandsintown.com/artists/" + nodeInput + "/events?app_id=" + bandKey;
 
   axios({
     method:'get',
-    url:"https://rest.bandsintown.com/artists/" + nodeInput + "/events?app_id=" + bandKey,
+    url: apiURL,
   })
     .then(function(response) {
+
+      console.log("-------------");
+      console.log(apiURL);
+      console.log("-------------");
+
 
         let event = Object.entries(response.data[0]);
         let venue = Object.entries(event[1])[1];
@@ -155,14 +154,14 @@ function doWhatItSays() {
     console.log(input);
   });
 
-  fs.appendFile('assets/random.txt', "\n* movie-this, 'I Want it That Way'", function(err) {
+  fs.writeFile('assets/random.txt', "* movie-this, 'I Want it That Way'", function(err) {
     if (err) throw err;
     console.log("Error: " + err);
   });
 
-  fs.appendFile('assets/random.txt', "\n* concert-this, 'I Want it That Way'", function(err) {
-    if (err) throw err;
-    console.log("Error: " + err);
-  });
+  // fs.appendFile('assets/random.txt', "\n* concert-this, 'I Want it That Way'", function(err) {
+  //   if (err) throw err;
+  //   console.log("Error: " + err);
+  // });
 
 };
