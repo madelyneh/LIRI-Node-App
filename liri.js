@@ -124,8 +124,7 @@ function movies(nodeInput) {
   axios({
     method:'get',
     url:"http://www.omdbapi.com/?t=" + nodeInput + "&y=&plot=short&apikey=" + omdbKey,
-  })
-    .then(function(response) {
+  }).then(function(response) {
     let newMovie = response.data;
 
       let ratings = Object.entries(newMovie.Ratings);
@@ -158,7 +157,7 @@ function movies(nodeInput) {
 
       fs.appendFile('assets/log.txt', movieLog.join('\n'), function(err) {
         if (err) throw err;
-        console.log("Error: " + err);
+        // console.log("Error: " + err);
       });
   });
 };
@@ -171,7 +170,6 @@ function doWhatItSays() {
     let command = commandData[1]; 
     let action = command.substring(0, command.length - 1)
     let input = commandData.slice(3).join(" ").replace("'", " ");
-    console.log(input);
 
     if (action === "spotify-this-song") {
 
@@ -200,10 +198,3 @@ function doWhatItSays() {
     };
   });
 };
-
-
-// fs.appendFile('assets/log.txt', " ", function(err) {
-  //   if (err) throw err;
-  //   console.log("Error: " + err);
-  // });
-

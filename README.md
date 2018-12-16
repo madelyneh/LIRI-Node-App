@@ -1,34 +1,64 @@
-# LIRI-Node-App
-----------
+<div style="text-align:center"><h1>LIRI-Node-App</h1><hr></div>
 
 ## Table of Contents 
-1. [What does Liri-Bot do?](#target)
-2. [Problems Addressed](#problems)
-3. [Technologies](#technologies)
+- [Table of Contents](#table-of-contents)
+- [What is Liri-Bot?](#what-is-liri-bot)
+  - [spotify-this-song error](#spotify-this-song-error)
+  - [movie-this error](#movie-this-error)
+- [Instructions for how to develop, use, and test the code](#instructions-for-how-to-develop-use-and-test-the-code)
+- [Technologies Used](#technologies-used)
+
+<br>
+
+  <div style="text-align:center"><img src="assets/images/liriBot.png" width="600px"></div>
+
+## What is Liri-Bot?
+
+ LIRI stands for: _**L**anguage **I**nterpretation and **R**ecognition **I**nterface._ 
+ This is a server-side application, written with node.js, that requires 1-2 arguments.
+ <br>
+  <div style="text-align:center"><img src="assets/images/argExample.png" width="400px"></div>
+<br>
 
 
-![MainDisplay](assets/images/liriBot.png)
-<a name="target"></a>
-## What does Liri-Bot do?
-* 
+ ## How does it work?
 
-### concert-this 
-![ConcertDisplay](assets/images/Liri-Concert.png)
+ * The application is run on the computers command line interface. 
+ * The first argument given determines which API function will be ran. 
+<br>
+   * Arguments Allowed:
+     * *spotify-this-song*
+     * *concert-this*
+     * *movie-this*
+     * *do-what-it-says*
+  <br>
+  * If the argument that is given doesn't equal one of those listed above then Liri will prompt the user:
+  <br>
+      * `"LIRI doesn't understand that - Please type 'node liri.js help' for more information"`
+  <br>
 
-### spotify-this-song 
-![SpotifyDisplay](assets/images/Liri-Spotify.png)
-
-### movie-this 
-![MovieDisplay](assets/images/Liri-Movie.png)
+        * The help argument will return this guide:
+  
+  <img src="assets/images/Liri-Help.png" width="450px">
 
 
-<a name="problems"></a>
-## Problems Addressed
-* 
+ * The second argument is the term that will be searched in the API call. After the API call a string of information about the song/band/movie will be ```console.log()``` to the command line and written to a text file called [log.txt](./assets/log.txt).
+<br>
+    * Examples of the response:
+<br>
 
+<div style="text-align:center">
+  <h4>spotify-this-song  |  movie-this  |  concert-this</h4>
+</div>
 
-### Liri-Help 
-![ConcertDisplay](assets/images/Liri-Help.png)
+<hr>
+<div style="text-align: center; display: inline-block">
+  <img src="assets/images/Liri-Spotify.png" width="450px">
+  <img src="assets/images/Liri-Movie.png" width="450px">
+  <img src="assets/images/Liri-Concert.png" width="450px">
+</div>
+<hr>
+
 
 ### spotify-this-song error
 ![SpotifyDisplay](assets/images/Liri-Spotify-er.png)
@@ -36,9 +66,10 @@
 ### movie-this error
 ![MovieDisplay](assets/images/Liri-Movie-er.png)
 
+## Instructions for how to develop, use, and test the code
 
-<a name="technologies"></a>
-## Technologies
+
+## Technologies Used
 
  - Axios
  - JavaScript w/ Node.js 

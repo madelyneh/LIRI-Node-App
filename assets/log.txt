@@ -1,49 +1,106 @@
-------------MovieInfo------------
-Movie Title: Help
-Release: 13 Aug 2010
-IMDB Rating: 4.3
+---------------MovieInfo------------
+Movie Title: Father of the Bride
+Release: 20 Dec 1991
+IMDB Rating: 6.5
+Rotten Tomatoes Rating: 70%
+Country Produced In: USA
+Language: English
+Actors: Steve Martin, Diane Keaton, Kimberly Williams-Paisley, Kieran Culkin
+Plot: With his oldest daughter's wedding approaching, a father finds himself reluctant to let go.
+-------------------------------------
 
-Country Produced In: India
-Language: Hindi
-Actors: Bobby Deol, Mugdha Godse, Shreyas Talpade, Sophie Handa
-Plot: An unhappily married pregnant woman suspects her vengeful deceased twin has returned from the dead.
--------------------------------------------------MovieInfo------------
-Movie Title: Father of the Bride
-Release: 20 Dec 1991
-IMDB Rating: 6.5
-Rotten Tomatoes Rating: 70%
-Country Produced In: USA
-Language: English
-Actors: Steve Martin, Diane Keaton, Kimberly Williams-Paisley, Kieran Culkin
-Plot: With his oldest daughter's wedding approaching, a father finds himself reluctant to let go.
--------------------------------------
-------------MovieInfo------------
-Movie Title: Father of the Bride
-Release: 20 Dec 1991
-IMDB Rating: 6.5
-Rotten Tomatoes Rating: 70%
-Country Produced In: USA
-Language: English
-Actors: Steve Martin, Diane Keaton, Kimberly Williams-Paisley, Kieran Culkin
-Plot: With his oldest daughter's wedding approaching, a father finds himself reluctant to let go.
--------------------------------------
------SongInfo-----
-Title: Hello
-Artist(s): Adele
-Song Name: Hello
-Preview Link: https://p.scdn.co/mp3-preview/0b90429fd554bad6785faa2b8931d613db4a0ee4?cid=8e142daad8924d559f95718e9d3943e6
-Album: 25
----------------------
------SongInfo-----
-Title: Hello
-Artist(s): Adele
-Song Name: Hello
-Preview Link: https://p.scdn.co/mp3-preview/0b90429fd554bad6785faa2b8931d613db4a0ee4?cid=8e142daad8924d559f95718e9d3943e6
-Album: 25
----------------------
 -----ConcertInfo-----
 Artist: Yellowclaw
 Venue Name: Ecovillage Tunisie
 Location: Sousse, Tunisia
 Date: 07-1-2019
 ----------------------
+-----ConcertInfo-----
+Artist: Yellowclaw
+Venue Name: Ecovillage Tunisie
+Location: Sousse, Tunisia
+Date: 07-1-2019
+----------------------
+-----ConcertInfo-----
+Artist: Yellowclaw
+Venue Name: Ecovillage Tunisie
+Location: Sousse, Tunisia
+Date: 07-1-2019
+----------------------
+-----ConcertInfo-----
+Artist: Yellowclaw
+Venue Name: Ecovillage Tunisie
+Location: Sousse, Tunisia
+Date: 07-1-2019
+----------------------
+-----ConcertInfo-----
+Artist: Yellowclaw
+Venue Name: Ecovillage Tunisie
+Location: Sousse, Tunisia
+Date: 07-1-2019
+----------------------
+-----SongInfo-----
+Title: Hello
+Artist(s): Adele
+Song Name: Hello
+Preview Link: https://p.scdn.co/mp3-preview/0b90429fd554bad6785faa2b8931d613db4a0ee4?cid=8e142daad8924d559f95718e9d3943e6
+Album: 25
+---------------------
+-----SongInfo-----
+Title: Hello
+Artist(s): Adele
+Song Name: Hello
+Preview Link: https://p.scdn.co/mp3-preview/0b90429fd554bad6785faa2b8931d613db4a0ee4?cid=8e142daad8924d559f95718e9d3943e6
+Album: 25
+---------------------
+------------MovieInfo------------
+Movie Title: The Help
+Release: 10 Aug 2011
+IMDB Rating: 8.1
+Rotten Tomatoes Rating: 75%
+Country Produced In: USA, India, United Arab Emirates
+Language: English
+Actors: Emma Stone, Viola Davis, Bryce Dallas Howard, Octavia Spencer
+Plot: An aspiring author during the civil rights movement of the 1960s decides to write a book detailing the African American maids' point of view on the white families for which they work, and the hardships they go through on a daily basis.
+-------------------------------------
+------------MovieInfo------------
+Movie Title: The Help
+Release: 10 Aug 2011
+IMDB Rating: 8.1
+Rotten Tomatoes Rating: 75%
+Country Produced In: USA, India, United Arab Emirates
+Language: English
+Actors: Emma Stone, Viola Davis, Bryce Dallas Howard, Octavia Spencer
+Plot: An aspiring author during the civil rights movement of the 1960s decides to write a book detailing the African American maids' point of view on the white families for which they work, and the hardships they go through on a daily basis.
+-------------------------------------
+-----SongInfo-----
+Title: Want it That Way 
+Artist(s): Backstreet Boys
+Song Name: I Want It That Way
+Preview Link: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=8e142daad8924d559f95718e9d3943e6
+Album: The Hits--Chapter One
+---------------------
+------------MovieInfo------------
+Movie Title: Backstreet Boys: I Want It That Way
+Release: 15 May 1999
+IMDB Rating: 7.0
+
+Country Produced In: USA
+Language: English
+Actors: Backstreet Boys, Nick Carter, Howie Dorough, Brian Littrell
+Plot: N/A
+-------------------------------------
+-----SongInfo-----
+Title: Want it That Way 
+Artist(s): Backstreet Boys
+Song Name: I Want It That Way
+Preview Link: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=8e142daad8924d559f95718e9d3943e6
+Album: The Hits--Chapter One
+---------------------
+-----SongInfo-----
+Title: Hello
+Artist(s): Adele
+Song Name: Hello
+Preview Link: https://p.scdn.co/mp3-preview/0b90429fd554bad6785faa2b8931d613db4a0ee4?cid=8e142daad8924d559f95718e9d3943e6
+Album: 25
+---------------------
