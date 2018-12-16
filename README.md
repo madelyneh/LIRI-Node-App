@@ -39,19 +39,19 @@
 
       * The help argument will return this guide:
   
-  <div style="text-align:center"><img src="assets/images/Liri-Help.png" width="500px"></div>
+  <div style="text-align:center"><img src="assets/images/Liri-Help.png" style = "width: 600px"></div>
 
 
  * The second argument is the term that will be searched in the API call. After the API call a string of information about the song/band/movie will be `console.log()` to the command line and written to a text file called [log.txt](./assets/log.txt).
 
- * Examples of the application response:
+    * Examples of the application response:
 
 <hr>
 
-<div style="text-align: center; display: inline-block">
-  <img src="assets/images/Liri-Spotify.png" width="450px">
-  <img src="assets/images/Liri-Movie.png" width="450px">
-  <img src="assets/images/Liri-Concert.png" width="450px">
+<div style="text-align: center">
+  <img src="assets/images/Liri-Spotify.png" style = "width: 400px">
+  <img src="assets/images/Liri-Movie.png" style = "width: 400px">
+  <img src="assets/images/Liri-Concert.png" style = "width: 400px">
 </div>
 <hr>
 

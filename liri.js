@@ -22,11 +22,13 @@ let nodeInput = process.argv.slice(3).toString(" ").replace(",", " ");
 switch (command) {
   // help function to clarify commands used
   case "help":
-      console.log("Please type one of these commands\n"+
+      console.log("Please type one of these commands:\n"+ 
+                  "---------------------------\n" +
                   "'concert-this': to search your favorite artist concerts\n"+
                   "'spotify-this-song': to search your favorite song\n"+
                   "'movie-this': to search your favorite movie \n"+
-                  "'do-what-it-says': using command from random.txt \n"
+                  "'do-what-it-says': using command from random.txt \n" +
+                  "---------------------------\n"
                   );
       break;
   case "concert-this":
