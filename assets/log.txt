@@ -41,3 +41,9 @@ Song Name: Hello
 Preview Link: https://p.scdn.co/mp3-preview/0b90429fd554bad6785faa2b8931d613db4a0ee4?cid=8e142daad8924d559f95718e9d3943e6
 Album: 25
 ---------------------
+-----ConcertInfo-----
+Artist: Yellowclaw
+Venue Name: Ecovillage Tunisie
+Location: Sousse, Tunisia
+Date: 07-1-2019
+----------------------

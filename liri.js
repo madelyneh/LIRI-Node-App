@@ -56,21 +56,29 @@ function concert(nodeInput) {
   })
     .then(function(response) {
 
-        let event = Object.entries(response.data[0]);
-        let venue = Object.entries(event[1])[1];
-        let venueInfo = venue[1];
-        let dateArray = event[2];
-        let date = dateArray[1];
-        let correctDate = date.substring(5,9) + "-" + date.substring(0,4);
-        let userInput = nodeInput.charAt(0).toUpperCase() + nodeInput.substring(1);
-        
-        console.log("-----ConcertInfo-----");
-        console.log("Artist: " + userInput);
-        console.log("Venue Name: " + venueInfo.name);
-        console.log("Location: " + venueInfo.city +", " + venueInfo.country);
-        console.log("Date: " + correctDate);
-        console.log("----------------------");
+      let event = Object.entries(response.data[0]);
+      let venue = Object.entries(event[1])[1];
+      let venueInfo = venue[1];
+      let dateArray = event[2];
+      let date = dateArray[1];
+      let correctDate = date.substring(5,9) + "-" + date.substring(0,4);
+      let userInput = nodeInput.charAt(0).toUpperCase() + nodeInput.substring(1);
 
+      let concertLog = [
+        "\n-----ConcertInfo-----",
+        "Artist: " + userInput,
+        "Venue Name: " + venueInfo.name,
+        "Location: " + venueInfo.city +", " + venueInfo.country,
+        "Date: " + correctDate,
+        "----------------------",
+      ];
+
+      console.log(concertLog.join('\n'));
+
+      fs.appendFile('assets/log.txt', concertLog.join('\n'), function(err) {
+        if (err) throw err;
+        console.log("Error: " + err);
+      });
     });
   };
 
@@ -97,7 +105,7 @@ function music(nodeInput) {
       "Album: " + songInfo[0].album.name,
       "---------------------",
     ];
-    
+
     console.log(songLog.join("\n"));
 
     fs.appendFile('assets/log.txt', songLog.join("\n"), function(err) {
@@ -160,7 +168,6 @@ function doWhatItSays() {
   fs.readFile('assets/random.txt', "utf8", function(error, data){
 
     let commandData = data.split(" ");
-    // console.log(commandData);
     let command = commandData[1]; 
     let action = command.substring(0, command.length - 1)
     let input = commandData.slice(3).join(" ").replace("'", " ");
@@ -178,7 +185,7 @@ function doWhatItSays() {
       
       movies(input);
 
-      fs.writeFile('assets/random.txt', "* concert-this, 'Hey'", function(err) {
+      fs.writeFile('assets/random.txt', "* concert-this, 'Yellowclaw'", function(err) {
         if (err) throw err;
         console.log("Error: " + err);
       });
