@@ -56,11 +56,6 @@ function concert(nodeInput) {
   })
     .then(function(response) {
 
-      console.log("-------------");
-      console.log(apiURL);
-      console.log("-------------");
-
-
         let event = Object.entries(response.data[0]);
         let venue = Object.entries(event[1])[1];
         let venueInfo = venue[1];
@@ -100,6 +95,8 @@ function music(nodeInput) {
     console.log("Preview Link: " + songInfo[0].preview_url);
     console.log("Album: " + songInfo[0].album.name);
     console.log("---------------------");
+
+
   });
 };
 
@@ -116,24 +113,38 @@ function movies(nodeInput) {
     .then(function(response) {
     let newMovie = response.data;
 
-      console.log("------------MovieInfo------------");
-      console.log("Movie Title: " + newMovie.Title);
-      console.log("Release: " + newMovie.Released);
-      console.log("IMDB Rating: " + newMovie.imdbRating);
       let ratings = Object.entries(newMovie.Ratings);
+      let tomatoes ;
 
       for (i = 0; i < ratings.length; i ++) {
         let rating = ratings[i];
         let source = rating[1].Source;
         if (source === 'Rotten Tomatoes') {
-          console.log("Rotten Tomatoes Rating: " + rating[1].Value);
+          tomatoes = "Rotten Tomatoes Rating: " + rating[1].Value;
+        } else {
+          tomatoes ;
         };
       }; 
-      console.log("Country Produced In: " + newMovie.Country);
-      console.log("Language: " + newMovie.Language);
-      console.log("Actors: " + newMovie.Actors);
-      console.log("Plot: " + newMovie.Plot);
-      console.log("-------------------------------------");
+
+      let movieLog = [
+        "\n------------MovieInfo------------",
+        "Movie Title: " + newMovie.Title,
+        "Release: " + newMovie.Released,
+        "IMDB Rating: " + newMovie.imdbRating,
+        tomatoes,
+        "Country Produced In: " + newMovie.Country,
+        "Language: " + newMovie.Language,
+        "Actors: " + newMovie.Actors,
+        "Plot: " + newMovie.Plot,
+        "-------------------------------------",
+      ];
+
+      console.log(movieLog.join('\n'));
+
+      fs.appendFile('assets/log.txt', movieLog.join('\n'), function(err) {
+        if (err) throw err;
+        console.log("Error: " + err);
+      });
   });
 };
 
@@ -147,8 +158,6 @@ function doWhatItSays() {
     let action = command.substring(0, command.length - 1)
     let input = commandData.slice(3).join(" ").replace("'", " ");
     console.log(input);
-
-    // substr(command.length + 3);
 
     if (action === "spotify-this-song") {
 
@@ -176,11 +185,11 @@ function doWhatItSays() {
       });
     };
   });
+};
 
 
-  // fs.appendFile('assets/random.txt', "\n* concert-this, 'I Want it That Way'", function(err) {
+// fs.appendFile('assets/log.txt', " ", function(err) {
   //   if (err) throw err;
   //   console.log("Error: " + err);
   // });
 
-};

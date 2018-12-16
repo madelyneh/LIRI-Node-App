@@ -1,0 +1,29 @@
+------------MovieInfo------------
+Movie Title: Help
+Release: 13 Aug 2010
+IMDB Rating: 4.3
+
+Country Produced In: India
+Language: Hindi
+Actors: Bobby Deol, Mugdha Godse, Shreyas Talpade, Sophie Handa
+Plot: An unhappily married pregnant woman suspects her vengeful deceased twin has returned from the dead.
+-------------------------------------------------MovieInfo------------
+Movie Title: Father of the Bride
+Release: 20 Dec 1991
+IMDB Rating: 6.5
+Rotten Tomatoes Rating: 70%
+Country Produced In: USA
+Language: English
+Actors: Steve Martin, Diane Keaton, Kimberly Williams-Paisley, Kieran Culkin
+Plot: With his oldest daughter's wedding approaching, a father finds himself reluctant to let go.
+-------------------------------------
+------------MovieInfo------------
+Movie Title: Father of the Bride
+Release: 20 Dec 1991
+IMDB Rating: 6.5
+Rotten Tomatoes Rating: 70%
+Country Produced In: USA
+Language: English
+Actors: Steve Martin, Diane Keaton, Kimberly Williams-Paisley, Kieran Culkin
+Plot: With his oldest daughter's wedding approaching, a father finds himself reluctant to let go.
+-------------------------------------
