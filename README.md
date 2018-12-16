@@ -8,7 +8,7 @@
 
 <br>
 
-  <div style="text-align:center"><img src="assets/images/liriBot.png" width="600px"></div>
+  <div style="text-align:center"><img src="assets/images/liriBot.png"></div>
 
 ## What is Liri-Bot?
 
@@ -16,7 +16,7 @@
  This is a server-side application, written with node.js, that requires 1-2 arguments.
 
  <br>
-  <div style="text-align:center"><img src="assets/images/argExample.png" width="400px"></div>
+  <div style="text-align:center"><img src="assets/images/argExample.png"></div>
 <br>
 
 
@@ -24,19 +24,20 @@
 
  * The application is run on the computers command line interface. 
  * The first argument given determines which API function will be ran. 
-<br>
+
    * Arguments Allowed:
      * *spotify-this-song*
      * *concert-this*
      * *movie-this*
      * *do-what-it-says*
-  <br>
+  
   * If the argument that is given doesn't equal one of those listed above then Liri will prompt the user:
-  <br>
-      * `"LIRI doesn't understand that - Please type 'node liri.js help' for more information"`
-  <br>
 
-        * The help argument will return this guide:
+       ```
+       LIRI doesn't understand that - Please type 'node liri.js help' for more information
+       ```
+
+      * The help argument will return this guide:
   
   <div style="text-align:center"><img src="assets/images/Liri-Help.png" width="500px"></div>
 
