@@ -3,8 +3,6 @@
 ## Table of Contents 
 - [Table of Contents](#table-of-contents)
 - [What is Liri-Bot?](#what-is-liri-bot)
-  - [spotify-this-song error](#spotify-this-song-error)
-  - [movie-this error](#movie-this-error)
 - [Instructions for how to develop, use, and test the code](#instructions-for-how-to-develop-use-and-test-the-code)
 - [Technologies Used](#technologies-used)
 
@@ -16,6 +14,7 @@
 
  LIRI stands for: _**L**anguage **I**nterpretation and **R**ecognition **I**nterface._ 
  This is a server-side application, written with node.js, that requires 1-2 arguments.
+
  <br>
   <div style="text-align:center"><img src="assets/images/argExample.png" width="400px"></div>
 <br>
@@ -39,7 +38,7 @@
 
         * The help argument will return this guide:
   
-  <img src="assets/images/Liri-Help.png" width="450px">
+  <div style="text-align:center"><img src="assets/images/Liri-Help.png" width="500px"></div>
 
 
  * The second argument is the term that will be searched in the API call. After the API call a string of information about the song/band/movie will be ```console.log()``` to the command line and written to a text file called [log.txt](./assets/log.txt).
