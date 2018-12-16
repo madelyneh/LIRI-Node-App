@@ -42,16 +42,12 @@
   <div style="text-align:center"><img src="assets/images/Liri-Help.png" width="500px"></div>
 
 
- * The second argument is the term that will be searched in the API call. After the API call a string of information about the song/band/movie will be ```console.log()``` to the command line and written to a text file called [log.txt](./assets/log.txt).
-<br>
-    * Examples of the response:
-<br>
+ * The second argument is the term that will be searched in the API call. After the API call a string of information about the song/band/movie will be `console.log()` to the command line and written to a text file called [log.txt](./assets/log.txt).
 
-<div style="text-align:center">
-  <h4>spotify-this-song  |  movie-this  |  concert-this</h4>
-</div>
+ * Examples of the application response:
 
 <hr>
+
 <div style="text-align: center; display: inline-block">
   <img src="assets/images/Liri-Spotify.png" width="450px">
   <img src="assets/images/Liri-Movie.png" width="450px">
