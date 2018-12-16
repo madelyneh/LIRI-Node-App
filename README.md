@@ -3,6 +3,8 @@
 ### Table of Contents 
 - [What is Liri-Bot?](#what-is-liri-bot)
 - [How does it work?](#how-does-it-work)
+- [Technologies](#technologies)
+- [Contributor](#contributor)
 
 <br>
 
@@ -40,7 +42,7 @@
   <div style="text-align:center"><img src="assets/images/Liri-Help.png" style = "width: 350px"></div>
 
 
- * The second argument is the term that will be searched in the API call. After the API call a string of information about the song/band/movie will be `console.log()` to the command line and written to a text file called [log.txt](./assets/log.txt).
+ * The second argument is the term that will be searched in the API call. After the API call, a string of information about the song/band/movie is constructed from the JSON object, and is `console.log()` to the command line and written to a text file called [log.txt](./assets/log.txt).
 
     * Examples of the application response:
 
@@ -59,3 +61,16 @@
   <img src="assets/images/Liri-Movie-er.png" style = "width: 350px">
   <hr>
 
+## Technologies Used
+
+- Axios
+- JavaScript
+- Node.js
+- Spotify API
+- Bands in Town API
+- OMDB API
+- Node File System
+
+## Contributor
+
+Made by Madelyn Helton. 2018.
