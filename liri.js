@@ -88,15 +88,22 @@ function music(nodeInput) {
     let songInfo = data.tracks.items;
     let userInput = nodeInput.charAt(0).toUpperCase() + nodeInput.substring(1);
 
-    console.log("-----SongInfo-----");
-    console.log("Title: " + userInput);
-    console.log("Artist(s): " + songInfo[0].artists[0].name);
-    console.log("Song Name: " + songInfo[0].name);
-    console.log("Preview Link: " + songInfo[0].preview_url);
-    console.log("Album: " + songInfo[0].album.name);
-    console.log("---------------------");
+    let songLog = [
+      "\n-----SongInfo-----",
+      "Title: " + userInput,
+      "Artist(s): " + songInfo[0].artists[0].name,
+      "Song Name: " + songInfo[0].name,
+      "Preview Link: " + songInfo[0].preview_url,
+      "Album: " + songInfo[0].album.name,
+      "---------------------",
+    ];
+    
+    console.log(songLog.join("\n"));
 
-
+    fs.appendFile('assets/log.txt', songLog.join("\n"), function(err) {
+      if (err) throw err;
+      console.log("Error: " + err);
+    });
   });
 };
 
