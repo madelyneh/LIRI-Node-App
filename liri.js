@@ -50,6 +50,10 @@ switch (command) {
 
 function concert(nodeInput) {
 
+  if (!nodeInput){
+    nodeInput = 'Yelloclaw';
+  };
+
   let apiURL = "https://rest.bandsintown.com/artists/" + nodeInput + "/events?app_id=" + bandKey;
 
   axios({
