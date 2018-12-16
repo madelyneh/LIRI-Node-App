@@ -141,24 +141,42 @@ function doWhatItSays() {
 
   fs.readFile('assets/random.txt', "utf8", function(error, data){
 
-    // console.log("--------Data--------");
-    // console.log(data);
-
-    commandData = data.split(" ");
+    let commandData = data.split(" ");
+    // console.log(commandData);
     let command = commandData[1]; 
     let action = command.substring(0, command.length - 1)
-    console.log("--------Action--------");
-    console.log(action);
-    let input = data.substr(command.length + 3);
+    let input = commandData.slice(3).join(" ").replace("'", " ");
+    console.log(input);
 
-    // if ()
-    music(input);
+    // substr(command.length + 3);
+
+    if (action === "spotify-this-song") {
+
+      music(input);
+
+      fs.writeFile('assets/random.txt', "* movie-this, 'I Want it That Way'", function(err) {
+        if (err) throw err;
+        console.log("Error: " + err);
+      });
+    } else if (action === "movie-this") {
+      
+      movies(input);
+
+      fs.writeFile('assets/random.txt', "* concert-this, 'Hey'", function(err) {
+        if (err) throw err;
+        console.log("Error: " + err);
+      });
+    } else if (action === "concert-this") {
+      
+      concert(input);
+
+      fs.writeFile('assets/random.txt', "* spotify-this-song, 'I Want it That Way'", function(err) {
+        if (err) throw err;
+        console.log("Error: " + err);
+      });
+    };
   });
 
-  fs.writeFile('assets/random.txt', "* movie-this, 'I Want it That Way'", function(err) {
-    if (err) throw err;
-    console.log("Error: " + err);
-  });
 
   // fs.appendFile('assets/random.txt', "\n* concert-this, 'I Want it That Way'", function(err) {
   //   if (err) throw err;
